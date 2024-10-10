@@ -1,26 +1,55 @@
-import React from 'react'
-import { Play } from 'lucide-react'
+import React from "react";
+
+import LogoIcon from "@public/assets/logo.png";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <Play className="text-green-500 w-8 h-8" />
-          <span className="ml-2 text-xl font-bold text-gray-800">commi</span>
-        </div>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><a href="#" className="text-gray-600 hover:text-gray-800">AI Personalized Video</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-800">WhatsApp Video Messages</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-800">API Generation</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-800">Blogs</a></li>
-          </ul>
-        </nav>
-        <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">Book a Demo</button>
-      </div>
-    </header>
-  )
-}
+    <Navbar
+      height={110}
+      position="static"
+      isBordered
+      classNames={{
+        wrapper: "container px-0",
+      }}
+    >
+      <NavbarBrand>
+        <img className="h-[46px]" src={LogoIcon} />
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-8" justify="end">
+        <NavbarItem isActive>
+          <Link color="foreground" href="#">
+            AI Personalized Video
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            WhatsApp Video Messages
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            API Generation
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Blogs
+          </Link>
+        </NavbarItem>
+        <Button className="bg-wati-green text-Text/Brand/Default w-[178px] font-bold px-4 py-2 rounded-md">
+          Book a Demo!
+        </Button>
+      </NavbarContent>
+    </Navbar>
+  );
+};
 
-export default Header
+export default Header;

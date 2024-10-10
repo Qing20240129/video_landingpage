@@ -6,8 +6,8 @@ import Features from './components/Features'
 import Stats from './components/Stats'
 import Integration from './components/Integration'
 import WhatsApp from './components/WhatsApp'
-import Capabilities from './components/Capabilities'
-import Footer from './components/Footer'
+import Capabilities from "./components/Capabilities";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <Capabilities />
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App

@@ -9,20 +9,27 @@ const Stats = () => {
   ]
 
   return (
-    <section className="bg-green-500 py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">Personalized Video Messages helps a lot on personal engagement, build trust and drive sales!</h2>
+    <section>
+      <div className="container px-20 py-10">
+        <h2 className="text-[22px] font-bold text-Text/Default/Default mb-9">
+          Personalized Video Messages helps a lot on personal engagement, build
+          trust and drive sales!
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-lg text-white">{stat.label}</div>
+              <div className="text-7xl font-bold text-wati-green mb-2">
+                {stat.value}
+              </div>
+              <div className="text-xl font-bold text-wati-green">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Stats
