@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import PlaygroundImg from "@public/assets/playground-image.png";
 import ApiImg from "@public/assets/api-image.png";
@@ -44,4 +44,4 @@ const Integration = () => {
   );
 };
 
-export default Integration
+export default Integration;

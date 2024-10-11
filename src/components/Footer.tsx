@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import Logo from "@public/assets/logo.png";
 
@@ -80,4 +80,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;

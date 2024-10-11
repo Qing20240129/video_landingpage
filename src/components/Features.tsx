@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Info } from "lucide-react";
 
 const Features = () => {
@@ -71,4 +71,4 @@ const Features = () => {
   );
 };
 
-export default Features
+export default Features;
