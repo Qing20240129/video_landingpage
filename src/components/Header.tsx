@@ -61,7 +61,7 @@ const Header = () => {
           <NavbarItem isActive={false} key={`${item}-${index}`}>
             <Link
               color={
-                item.key === window.location.pathname.replace("/", "")
+                window.location.pathname.includes(item.key)
                   ? "primary"
                   : "foreground"
               }
@@ -80,7 +80,7 @@ const Header = () => {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                item.key === window.location.hash.replace("#", "")
+                window.location.pathname.includes(item.key)
                   ? "primary"
                   : "foreground"
               }
