@@ -11,7 +11,7 @@ const Stats = () => {
   return (
     <section>
       <div className="container px-20 py-10">
-        <h2 className="text-[22px] font-bold text-Text/Default/Default mb-9">
+        <h2 className="text-[22px] font-bold mb-9">
           Personalized Video Messages helps a lot on personal engagement, build
           trust and drive sales!
         </h2>

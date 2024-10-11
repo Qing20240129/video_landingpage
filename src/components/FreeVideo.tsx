@@ -29,7 +29,7 @@ const FreeVideo = () => {
           <span className="font-bold">1000 business</span> to grow with
           personalized video messages, Join us for FREE!
         </p>
-        <form onSubmit={handleSubmit} className="flex gap-4">
+        <form onSubmit={handleSubmit} className="flex gap-4 flex-wrap">
           <Input
             variant="bordered"
             className="max-w-60"

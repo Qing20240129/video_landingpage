@@ -5,49 +5,94 @@ import {
   Navbar,
   NavbarBrand,
   NavbarContent,
+  NavbarMenuToggle,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
   Link,
-  Button,
 } from "@nextui-org/react";
+import BookDemoBtn from "./BookDemoBtn";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    {
+      label: "AI Personalized Video",
+      key: "ai-personalized-videos",
+      href: "/#ai-personalized-videos",
+    },
+    {
+      label: "WhatsApp Video Messages",
+      key: "whatsapp-video-messages",
+      href: "/#whatsapp-video-messages",
+    },
+    {
+      label: "API Generation",
+      key: "api-video-generation",
+      href: "/#api-video-generation",
+    },
+    { label: "Blogs", key: "blogs", href: "/blogs" },
+  ];
+
   return (
     <Navbar
       height={110}
-      position="static"
+      // position="static"
       isBordered
       classNames={{
-        wrapper: "container px-0",
+        wrapper: "container px-8",
       }}
+      onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarBrand>
-        <img className="h-[46px]" src={LogoIcon} />
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-8" justify="end">
-        <NavbarItem isActive>
-          <Link color="foreground" href="#">
-            AI Personalized Video
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <Link href="/">
+            <img className="h-[46px] min-w-[129px]" src={LogoIcon} />
           </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            WhatsApp Video Messages
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            API Generation
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Blogs
-          </Link>
-        </NavbarItem>
-        <Button className="bg-wati-green text-Text/Brand/Default w-[178px] font-bold px-4 py-2 rounded-md">
-          Book a Demo!
-        </Button>
+        </NavbarBrand>
       </NavbarContent>
+      <NavbarContent className="hidden sm:flex gap-8" justify="end">
+        {menuItems.map((item, index) => (
+          <NavbarItem isActive={false} key={`${item}-${index}`}>
+            <Link
+              color={
+                item.key === window.location.pathname.replace("/", "")
+                  ? "primary"
+                  : "foreground"
+              }
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <BookDemoBtn />
+      </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                item.key === window.location.hash.replace("#", "")
+                  ? "primary"
+                  : "foreground"
+              }
+              className="w-full"
+              href={item.href}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 };

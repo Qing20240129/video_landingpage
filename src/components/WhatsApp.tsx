@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "@nextui-org/react";
+import BookDemoBtn from "./BookDemoBtn";
 import CreateVideoImg from "@public/assets/create-video.png";
 import CommiApiImg from "@public/assets/commi-api.png";
 
@@ -8,12 +8,15 @@ const WhatsApp = () => {
   return (
     <section>
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center px-14 py-20">
+        <div
+          id="whatsapp-video-messages"
+          className="flex flex-col md:flex-row items-center px-14 py-20"
+        >
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img
               src="https://cdn.clare.ai/aigc/FemaleIllustration2.png"
               alt="WhatsApp Integration"
-              className="rounded-lg shadow-lg max-w-[509px] h-auto"
+              className="rounded-lg shadow-lg w-full max-w-[509px] h-auto"
             />
           </div>
           <div className="md:w-1/2 md:pl-12">
@@ -24,17 +27,18 @@ const WhatsApp = () => {
               Generate Personalized Video Messages and send them to WhatsAPP by
               easy steps!
             </p>
-            <Button className="bg-wati-green text-[#2C2C2C] w-[178px] font-bold px-4 py-2 rounded-md">
-              Book A Demo!
-            </Button>
+            <BookDemoBtn />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row-reverse items-center px-14 py-20">
+        <div
+          id="bulk-of-video-at-scale"
+          className="flex flex-col md:flex-row-reverse items-center px-14 py-20"
+        >
           <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
             <img
               src={CreateVideoImg}
               alt="Bulk Video Creation"
-              className="rounded-lg shadow-lg max-w-full h-auto"
+              className="rounded-lg shadow-lg w-full max-w-[509px] h-auto"
             />
           </div>
           <div className="md:w-1/2">
@@ -45,17 +49,18 @@ const WhatsApp = () => {
               Generate bulk of videos by switching variables, for example,
               &#123;&#123;name&#125;&#125;...
             </p>
-            <Button className="bg-wati-green text-Text/Brand/Default w-[178px] font-bold px-4 py-2 rounded-md">
-              Book A Demo!
-            </Button>
+            <BookDemoBtn />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center px-14 py-20">
+        <div
+          id="api-video-generation"
+          className="flex flex-col md:flex-row items-center px-14 py-20"
+        >
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img
               src={CommiApiImg}
               alt="WhatsApp Integration"
-              className="rounded-lg shadow-lg max-w-[509px] h-auto"
+              className="rounded-lg shadow-lg w-full max-w-[509px] h-auto"
             />
           </div>
           <div className="md:w-1/2 md:pl-12">
@@ -66,9 +71,7 @@ const WhatsApp = () => {
               Generate Personalized Video Messages and send them to WhatsAPP by
               easy steps!
             </p>
-            <Button className="bg-wati-green text-Text/Brand/Default w-[178px] font-bold px-4 py-2 rounded-md">
-              Book A Demo!
-            </Button>
+            <BookDemoBtn />
           </div>
         </div>
       </div>

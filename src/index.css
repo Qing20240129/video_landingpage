@@ -4,8 +4,12 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  color: '#1E1E1E';
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;

@@ -27,9 +27,9 @@ const Features = () => {
   ];
 
   return (
-    <section>
+    <section id="ai-personalized-videos">
       <div className="container p-16">
-        <h2 className="text-2xl font-semibold text-Text/Default/Default mb-2">
+        <h2 className="text-2xl font-semibold mb-2">
           Why use personalized video?
         </h2>
         <p className="text-xl text-Text/Default/Secondary mb-12">
@@ -41,9 +41,7 @@ const Features = () => {
             <div key={index} className="flex gap-6">
               <Info className="w-[26px] h-[26px]" />
               <div className="flex-1">
-                <h3 className="text-xl text-Text/Default/Default font-semibold mb-2">
-                  {feature.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-Text/Default/Secondary">
                   {feature.description}
                 </p>

@@ -12,7 +12,6 @@ export default {
       colors: {
         "wati-green": "#00E785",
         "Text/Brand/Default": "#2C2C2C",
-        "Text/Default/Default": "#1E1E1E",
         "Text/Default/Secondary": "#757575",
         "Background/Brand/Default": "#2C2C2C",
         "Background/Default/Secondary": "#F5F5F5",
